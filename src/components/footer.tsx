@@ -1,0 +1,24 @@
+import { Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export function Footer() {
+    return (
+        <footer className="border-t bg-card/50 backdrop-blur-sm">
+            <div className="container py-16 text-center">
+                <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl">
+                    Make your Mac&apos;s battery last longer.
+                </h2>
+                <p className="mb-10 text-lg text-muted-foreground">
+                    Start for free. Upgrade anytime.
+                </p>
+                <Button size="lg" className="gap-2 text-base">
+                    <Download className="h-4 w-4" />
+                    Download for Free
+                </Button>
+                <div className="mt-16 text-sm text-muted-foreground">
+                    © {new Date().getFullYear()} BatteryMe. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    );
+}
