@@ -32,7 +32,12 @@ export function Pricing() {
                             </li>
                         ))}
                     </ul>
-                    <Button variant="outline" className="w-full" size="lg">
+                    <Button
+                        variant="outline"
+                        className="w-full"
+                        size="lg"
+                        onClick={() => window.open('#download', '_self')}
+                    >
                         Download for Free
                     </Button>
                 </div>
@@ -60,7 +65,11 @@ export function Pricing() {
                             </li>
                         ))}
                     </ul>
-                    <Button className="w-full" size="lg">
+                    <Button
+                        className="w-full"
+                        size="lg"
+                        onClick={() => window.open('https://buy.stripe.com/4gMeVe3ih0Ex3OA0xV4gg00', '_blank')}
+                    >
                         Upgrade to Pro
                     </Button>
                 </div>

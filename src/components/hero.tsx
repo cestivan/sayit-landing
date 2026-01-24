@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BorderBeam } from "@/components/ui/border-beam";
+import { EmailCapture } from "@/components/email-capture";
 
 export function Hero() {
     return (
@@ -44,16 +45,20 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
-                    className="mt-10 flex flex-col gap-4 sm:flex-row"
+                    className="mt-10 w-full flex flex-col items-center gap-6"
                 >
-                    <Button size="lg" className="gap-2 text-base">
-                        <Download className="h-4 w-4" />
-                        Download for Free
-                    </Button>
-                    <Button size="lg" variant="outline" className="gap-2 text-base">
-                        See Pro Features
-                        <ArrowRight className="h-4 w-4" />
-                    </Button>
+                    <EmailCapture />
+                    <div className="flex flex-col gap-4 sm:flex-row">
+                        <Button
+                            size="lg"
+                            variant="outline"
+                            className="gap-2 text-base"
+                            onClick={() => window.open('#pricing', '_self')}
+                        >
+                            See Pro Features
+                            <ArrowRight className="h-4 w-4" />
+                        </Button>
+                    </div>
                 </motion.div>
 
                 <motion.div

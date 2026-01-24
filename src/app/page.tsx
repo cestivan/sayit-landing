@@ -6,6 +6,7 @@ import { LogoShowcase } from "@/components/logo-showcase";
 import { PainPoints } from "@/components/pain-points";
 import { Pricing } from "@/components/pricing";
 import { SocialProof } from "@/components/social-proof";
+import { FAQ } from "@/components/faq";
 
 export default function Home() {
   return (
@@ -15,9 +16,14 @@ export default function Home() {
       <Hero />
       <PainPoints />
       <FeaturesSection />
-      <Pricing />
+      <div id="pricing">
+        <Pricing />
+      </div>
       <SocialProof />
-      <Footer />
+      <FAQ />
+      <div id="download">
+        <Footer />
+      </div>
     </main>
   );
 }
