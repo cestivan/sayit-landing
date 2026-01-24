@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Mail, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import posthog from "posthog-js";
 
 export function EmailCapture() {
     const [email, setEmail] = useState("");
@@ -30,6 +31,12 @@ export function EmailCapture() {
                 timestamp: new Date().toISOString(),
             });
             localStorage.setItem("batteryme-emails", JSON.stringify(emails));
+
+            // Track email signup in PostHog
+            posthog.capture('email_captured', {
+                source: 'hero_section',
+                email_domain: email.split('@')[1]
+            });
 
             setStatus("success");
             setMessage("Thanks! We'll notify you when BatteryMe launches.");

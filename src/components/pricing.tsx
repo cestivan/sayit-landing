@@ -3,6 +3,7 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import posthog from "posthog-js";
 
 export function Pricing() {
     return (
@@ -36,7 +37,13 @@ export function Pricing() {
                         variant="outline"
                         className="w-full"
                         size="lg"
-                        onClick={() => window.open('#download', '_self')}
+                        onClick={() => {
+                            posthog.capture('download_clicked', {
+                                plan: 'free',
+                                location: 'pricing_section'
+                            });
+                            window.open('#download', '_self');
+                        }}
                     >
                         Download for Free
                     </Button>
@@ -68,7 +75,14 @@ export function Pricing() {
                     <Button
                         className="w-full"
                         size="lg"
-                        onClick={() => window.open('https://buy.stripe.com/4gMeVe3ih0Ex3OA0xV4gg00', '_blank')}
+                        onClick={() => {
+                            posthog.capture('upgrade_clicked', {
+                                plan: 'pro',
+                                price: '$19.99',
+                                location: 'pricing_section'
+                            });
+                            window.open('https://buy.stripe.com/4gMeVe3ih0Ex3OA0xV4gg00', '_blank');
+                        }}
                     >
                         Upgrade to Pro
                     </Button>

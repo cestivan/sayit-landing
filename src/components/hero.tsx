@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { EmailCapture } from "@/components/email-capture";
+import posthog from "posthog-js";
 
 export function Hero() {
     return (
@@ -53,7 +54,12 @@ export function Hero() {
                             size="lg"
                             variant="outline"
                             className="gap-2 text-base"
-                            onClick={() => window.open('#pricing', '_self')}
+                            onClick={() => {
+                                posthog.capture('see_pricing_clicked', {
+                                    location: 'hero_section'
+                                });
+                                window.open('#pricing', '_self');
+                            }}
                         >
                             See Pro Features
                             <ArrowRight className="h-4 w-4" />
