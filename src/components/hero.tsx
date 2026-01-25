@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Zap } from "lucide-react";
-import Link from "next/link";
+import { ArrowRight, Mic, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BorderBeam } from "@/components/ui/border-beam";
@@ -19,8 +18,8 @@ export function Hero() {
                     transition={{ duration: 0.5 }}
                 >
                     <Badge variant="secondary" className="mb-6 gap-2 px-4 py-1.5 text-sm">
-                        <Zap className="h-3.5 w-3.5 fill-primary text-primary" />
-                        <span>New: AI Battery Insights</span>
+                        <Sparkles className="h-3.5 w-3.5 fill-primary text-primary" />
+                        <span>AI-Powered Voice-to-Text</span>
                     </Badge>
                 </motion.div>
 
@@ -30,7 +29,7 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.1 }}
                     className="max-w-4xl bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-7xl"
                 >
-                    Meet the smartest battery companion for your Mac.
+                    Speak. Create. Done.
                 </motion.h1>
 
                 <motion.p
@@ -39,7 +38,7 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl"
                 >
-                    Real-time power. Deep insights. Finally understand <span className="italic text-foreground">why</span> your battery loses health — and how to make it last longer.
+                    Turn your voice into perfect text instantly. Transcribe meetings, write notes, create content — all with <span className="italic text-foreground">native macOS speed</span> and privacy.
                 </motion.p>
 
                 <motion.div
@@ -76,9 +75,7 @@ export function Hero() {
                     <div className="aspect-[16/10] w-full overflow-hidden rounded-xl bg-gradient-to-br from-card to-muted/20 p-8 flex items-center justify-center">
                         {/* Placeholder for the app screenshot */}
                         <div className="flex flex-col items-center gap-4 text-muted-foreground">
-                            <div className="h-24 w-24 rounded-full border-4 border-primary/20 border-t-primary flex items-center justify-center text-3xl font-bold text-foreground">
-                                85%
-                            </div>
+                            <Mic className="h-24 w-24 text-primary" strokeWidth={1.5} />
                             <p>App Screenshot Placeholder</p>
                         </div>
                     </div>

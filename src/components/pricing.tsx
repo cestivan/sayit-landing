@@ -10,10 +10,10 @@ export function Pricing() {
         <section className="container py-24 sm:py-32">
             <div className="mx-auto max-w-2xl text-center mb-16">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                    Simple pricing. <span className="text-primary">Powerful insights.</span>
+                    Simple pricing. <span className="text-primary">Unlimited power.</span>
                 </h2>
                 <p className="mt-4 text-lg text-muted-foreground">
-                    Start for free. Upgrade when you need deep AI analysis.
+                    Start for free. Upgrade when you need unlimited transcription.
                 </p>
             </div>
 
@@ -22,8 +22,9 @@ export function Pricing() {
                 <div className="relative rounded-3xl border bg-card/50 p-8 shadow-sm backdrop-blur-sm">
                     <div className="mb-8">
                         <h3 className="text-2xl font-bold">Free</h3>
-                        <p className="mt-2 text-muted-foreground">Perfect replacement for standard tools.</p>
+                        <p className="mt-2 text-muted-foreground">Perfect for casual use.</p>
                         <div className="mt-4 text-4xl font-bold">$0</div>
+                        <p className="mt-2 text-sm text-muted-foreground">5 minutes/day</p>
                     </div>
                     <ul className="mb-8 space-y-4 text-sm text-muted-foreground">
                         {freeFeatures.map((feature) => (
@@ -58,11 +59,12 @@ export function Pricing() {
                     </div>
                     <div className="mb-8">
                         <h3 className="text-2xl font-bold">Pro</h3>
-                        <p className="mt-2 text-muted-foreground">For users who want full control.</p>
-                        <div className="mt-4 flex items-baseline gap-1">
-                            <span className="text-4xl font-bold">$19.99</span>
-                            <span className="text-muted-foreground">/year</span>
+                        <p className="mt-2 text-muted-foreground">For creators and professionals.</p>
+                        <div className="mt-4 flex items-baseline gap-2">
+                            <span className="text-4xl font-bold">$9.99</span>
+                            <span className="text-muted-foreground">/month</span>
                         </div>
+                        <p className="mt-2 text-sm text-muted-foreground">or $99/year (save 17%)</p>
                     </div>
                     <ul className="mb-8 space-y-4 text-sm text-muted-foreground">
                         {proFeatures.map((feature) => (
@@ -72,20 +74,37 @@ export function Pricing() {
                             </li>
                         ))}
                     </ul>
-                    <Button
-                        className="w-full"
-                        size="lg"
-                        onClick={() => {
-                            posthog.capture('upgrade_clicked', {
-                                plan: 'pro',
-                                price: '$19.99',
-                                location: 'pricing_section'
-                            });
-                            window.open('https://buy.stripe.com/4gMeVe3ih0Ex3OA0xV4gg00', '_blank');
-                        }}
-                    >
-                        Upgrade to Pro
-                    </Button>
+                    <div className="flex flex-col gap-3">
+                        <Button
+                            className="w-full"
+                            size="lg"
+                            onClick={() => {
+                                posthog.capture('upgrade_clicked', {
+                                    plan: 'pro_monthly',
+                                    price: '$9.99',
+                                    location: 'pricing_section'
+                                });
+                                window.open('https://buy.stripe.com/4gM5kEdWVdrj5WI80n4gg01', '_blank');
+                            }}
+                        >
+                            Upgrade to Pro (Monthly)
+                        </Button>
+                        <Button
+                            variant="outline"
+                            className="w-full"
+                            size="lg"
+                            onClick={() => {
+                                posthog.capture('upgrade_clicked', {
+                                    plan: 'pro_yearly',
+                                    price: '$99',
+                                    location: 'pricing_section'
+                                });
+                                window.open('https://buy.stripe.com/9B6aEYdWVbjbdpa6Wj4gg02', '_blank');
+                            }}
+                        >
+                            Upgrade to Pro (Yearly)
+                        </Button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -93,20 +112,19 @@ export function Pricing() {
 }
 
 const freeFeatures = [
-    "Real-time power monitoring",
-    "Battery temperature & health",
-    "PD Charger profiles",
-    "24h Power history",
-    "Basic alerts",
-    "Menu bar widgets",
+    "5 minutes of transcription per day",
+    "Real-time voice-to-text",
+    "Multi-language support (EN/CN/JP)",
+    "On-device processing (privacy first)",
+    "Export to text files",
+    "Keyboard shortcuts",
 ];
 
 const proFeatures = [
+    "Unlimited transcription",
     "Everything in Free",
-    "AI Health Explanations",
-    "Unsafe Charger Detection",
-    "30 / 90 Day Trends",
-    "Aging & Lifespan Prediction",
-    "External Monitor Impact Analysis",
-    "Smart Optimization Suggestions",
+    "Cloud sync across devices",
+    "Advanced audio processing",
+    "Priority support",
+    "Early access to new features",
 ];

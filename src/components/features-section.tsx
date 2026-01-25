@@ -2,9 +2,9 @@
 
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
-    Activity,
-    BrainCircuit,
-    ShieldAlert,
+    Mic,
+    Languages,
+    Lock,
     Zap,
 } from "lucide-react";
 
@@ -13,10 +13,10 @@ export function FeaturesSection() {
         <section className="container py-24 sm:py-32">
             <div className="mb-12 text-center">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                    Everything you need to <span className="text-primary">master your battery</span>.
+                    Everything you need to <span className="text-primary">speak freely</span>.
                 </h2>
                 <p className="mt-4 text-lg text-muted-foreground">
-                    From real-time monitoring to AI-powered insights.
+                    From instant transcription to multi-language support.
                 </p>
             </div>
             <BentoGrid className="max-w-4xl mx-auto">
@@ -41,21 +41,21 @@ const Skeleton = ({ color }: { color: string }) => (
 
 const items = [
     {
-        title: "Real-time Monitoring",
-        description: "See power usage, temperature, and charging speed in one glance.",
-        header: <Skeleton color="from-green-500/20 to-green-500/5" />,
-        icon: <Activity className="h-4 w-4 text-neutral-500" />,
-    },
-    {
-        title: "AI Explanations",
-        description: "Understand every drop in battery health. High temp? Bad charger? We tell you why.",
+        title: "Lightning Fast Transcription",
+        description: "Real-time voice-to-text with zero lag. Native macOS performance.",
         header: <Skeleton color="from-blue-500/20 to-blue-500/5" />,
-        icon: <BrainCircuit className="h-4 w-4 text-neutral-500" />,
+        icon: <Zap className="h-4 w-4 text-neutral-500" />,
     },
     {
-        title: "Intelligent Alerts",
-        description: "Prevent damage with smart notifications for high temps and unsafe chargers.",
-        header: <Skeleton color="from-red-500/20 to-red-500/5" />,
-        icon: <ShieldAlert className="h-4 w-4 text-neutral-500" />,
+        title: "Multi-Language Support",
+        description: "Speak in English, Chinese, or Japanese. Automatic language detection.",
+        header: <Skeleton color="from-purple-500/20 to-purple-500/5" />,
+        icon: <Languages className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+        title: "Privacy First",
+        description: "All processing happens on your device. Your voice never leaves your Mac.",
+        header: <Skeleton color="from-green-500/20 to-green-500/5" />,
+        icon: <Lock className="h-4 w-4 text-neutral-500" />,
     },
 ];

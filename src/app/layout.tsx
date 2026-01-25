@@ -16,20 +16,20 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "BatteryMe - The Smartest Battery Companion for Mac",
-  description: "Real-time power monitoring, AI insights, and intelligent alerts to extend your MacBook's battery life.",
+  title: "SayIt - AI Voice-to-Text for Mac",
+  description: "Turn your voice into perfect text instantly. Lightning-fast transcription with multi-language support and privacy-first design.",
   openGraph: {
-    title: "BatteryMe - The Smartest Battery Companion for Mac",
-    description: "Real-time power monitoring, AI insights, and intelligent alerts to extend your MacBook's battery life.",
-    url: "https://batteryme.app",
-    siteName: "BatteryMe",
+    title: "SayIt - AI Voice-to-Text for Mac",
+    description: "Turn your voice into perfect text instantly. Lightning-fast transcription with multi-language support and privacy-first design.",
+    url: "https://sayit.app",
+    siteName: "SayIt",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BatteryMe - The Smartest Battery Companion for Mac",
-    description: "Real-time power monitoring, AI insights, and intelligent alerts to extend your MacBook's battery life.",
+    title: "SayIt - AI Voice-to-Text for Mac",
+    description: "Turn your voice into perfect text instantly. Lightning-fast transcription with multi-language support and privacy-first design.",
   },
 };
 
