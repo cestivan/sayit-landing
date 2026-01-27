@@ -1,23 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BatteryWarning, ThermometerSun, ZapOff } from "lucide-react";
+import { Keyboard, Clock, FileText } from "lucide-react";
 
 const features = [
     {
-        name: "Battery Health Mystery",
-        description: "Your Mac's battery health drops — but you never know why. Was it heat? Bad charging habits?",
-        icon: BatteryWarning,
+        name: "Typing Fatigue",
+        description: "Long meetings, interviews, or brainstorming sessions leave your fingers exhausted. Typing slows you down when ideas flow fast.",
+        icon: Keyboard,
     },
     {
-        name: "Fake Charger Wattage",
-        description: "Your charger says 65W — but is it actually outputting that? Or is it dangerously fluctuating?",
-        icon: ZapOff,
+        name: "Lost Ideas",
+        description: "You can think faster than you can type. Great ideas evaporate while you struggle to capture them in writing.",
+        icon: Clock,
     },
     {
-        name: "Phantom Overheating",
-        description: "Your laptop gets hot and fans spin up — but you don't know which background app or external display caused it.",
-        icon: ThermometerSun,
+        name: "Manual Transcription Hell",
+        description: "Hours wasted transcribing recorded meetings or voice memos. Copy-paste from online tools, formatting fixes, language switching.",
+        icon: FileText,
     },
 ];
 
@@ -26,11 +26,11 @@ export function PainPoints() {
         <section className="container py-24 sm:py-32">
             <div className="mx-auto max-w-2xl text-center">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                    macOS gives you battery numbers. <br />
-                    <span className="text-primary">We give you answers.</span>
+                    Your voice is faster than your keyboard. <br />
+                    <span className="text-primary">Stop typing. Start speaking.</span>
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                    This app reveals everything Apple doesn&apos;t show you. Stop guessing and start understanding.
+                    Transform hours of typing into seconds of speaking. Capture thoughts at the speed of conversation.
                 </p>
             </div>
             <div className="mx-auto mt-16 max-w-7xl px-6 lg:px-8">

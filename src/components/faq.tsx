@@ -12,43 +12,43 @@ interface FAQItem {
 const faqItems: FAQItem[] = [
   {
     question: "What's the difference between Free and Pro versions?",
-    answer: "The Free version includes all essential battery monitoring features like health tracking, cycle count, temperature, and charging history. Pro adds AI-powered insights, predictive analytics, personalized optimization tips, smart charging recommendations, battery longevity forecasts, and detailed usage pattern analysis."
+    answer: "The Free version gives you 5 minutes of transcription per day - perfect for quick notes and short meetings. Pro unlocks unlimited transcription, multi-language support (Chinese, English, Japanese), cross-device sync, and priority support."
   },
   {
-    question: "How does the license work?",
-    answer: "BatteryMe Pro uses a perpetual license model. Purchase once at $19.99 and own it forever on one Mac. The license is tied to your Mac's hardware ID and activates instantly via email. No subscription required."
+    question: "How does the subscription work?",
+    answer: "SayIt Pro offers flexible subscription options: $9.99/month or $99/year (save 17%). Subscribe directly in the app using Stripe - no iTunes account needed. Cancel anytime with no questions asked."
   },
   {
-    question: "Can I use my license on multiple Macs?",
-    answer: "Each license is valid for one Mac device. If you need to transfer your license to a new Mac, contact our support team at support@batteryme.app for assistance."
+    question: "Can I use SayIt Pro on multiple Macs?",
+    answer: "Yes! Your Pro subscription syncs across all your Macs where you sign in with the same account. Use SayIt on your work laptop, home iMac, or MacBook - all covered by one subscription."
   },
   {
     question: "What macOS versions are supported?",
-    answer: "BatteryMe requires macOS 13.0 (Ventura) or later. It's optimized for Apple Silicon (M1/M2/M3) and Intel-based Macs."
+    answer: "SayIt requires macOS 13.0 (Ventura) or later. It's optimized for Apple Silicon (M1/M2/M3) and Intel-based Macs with native speech recognition."
   },
   {
-    question: "Is my battery data private and secure?",
-    answer: "Absolutely. All battery data is stored locally on your Mac. We don't collect, transmit, or sell any usage data. Your privacy is paramount."
+    question: "Is my voice data private and secure?",
+    answer: "Absolutely. All transcription happens locally on your Mac using Apple's Speech framework. Your audio never leaves your device. We don't store, transmit, or analyze your voice recordings."
   },
   {
-    question: "How accurate are the AI predictions?",
-    answer: "Our AI models analyze 30+ battery metrics to provide predictions with 85-90% accuracy. Accuracy improves as BatteryMe learns your usage patterns over time (typically 7-14 days)."
+    question: "How accurate is the transcription?",
+    answer: "SayIt uses Apple's native Speech Recognition API, delivering 90-95% accuracy for clear speech in supported languages. Accuracy improves with better microphone quality and minimal background noise."
   },
   {
-    question: "What if I'm not satisfied with my purchase?",
-    answer: "We offer a 30-day money-back guarantee. If BatteryMe Pro doesn't meet your expectations, email support@batteryme.app for a full refund—no questions asked."
+    question: "What if I'm not satisfied with my subscription?",
+    answer: "We offer a 7-day money-back guarantee. If SayIt Pro doesn't meet your expectations, email support@crossmind.io within 7 days for a full refund—no questions asked."
   },
   {
-    question: "Do I need an internet connection to use BatteryMe?",
-    answer: "No. BatteryMe works completely offline after initial license activation. All monitoring, analysis, and AI predictions run locally on your Mac."
+    question: "Do I need an internet connection to use SayIt?",
+    answer: "No. After initial subscription activation, SayIt works completely offline. All speech recognition runs locally using Apple's on-device models with zero network latency."
   },
   {
-    question: "How often is BatteryMe updated?",
-    answer: "We release updates regularly with new features, performance improvements, and macOS compatibility updates. All updates are free for Pro license holders."
+    question: "Which languages does SayIt support?",
+    answer: "Free version supports English only. Pro unlocks Chinese (Mandarin), Japanese, and English with automatic language detection. More languages coming based on user feedback."
   },
   {
-    question: "Can BatteryMe damage my battery or void my warranty?",
-    answer: "No. BatteryMe is a read-only monitoring tool. It safely reads battery data using Apple's official APIs without modifying any system settings or battery behavior. It won't void your warranty."
+    question: "Can SayIt transcribe pre-recorded audio files?",
+    answer: "Not yet - SayIt currently focuses on live transcription for maximum speed and accuracy. Audio file transcription is on our roadmap for a future update."
   }
 ];
 
@@ -90,7 +90,7 @@ export function FAQ() {
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Everything you need to know about BatteryMe
+            Everything you need to know about SayIt
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export function FAQ() {
             Still have questions?
           </p>
           <a
-            href="mailto:support@batteryme.app"
+            href="mailto:support@crossmind.io"
             className="text-primary hover:underline font-medium"
           >
             Contact our support team →

@@ -10,7 +10,7 @@ export function Navbar() {
             <div className="container flex h-14 items-center">
                 <Link href="/" className="mr-6 flex items-center space-x-2">
                     <Logo variant="bolt" className="h-6 w-6 text-primary" />
-                    <span className="hidden font-bold sm:inline-block">BatteryMe</span>
+                    <span className="hidden font-bold sm:inline-block">SayIt</span>
                 </Link>
                 <nav className="flex items-center space-x-6 text-sm font-medium">
                     <Link

@@ -25,12 +25,12 @@ export function EmailCapture() {
 
         try {
             // Store email in localStorage for now (will integrate with backend later)
-            const emails = JSON.parse(localStorage.getItem("batteryme-emails") || "[]");
+            const emails = JSON.parse(localStorage.getItem("sayit-emails") || "[]");
             emails.push({
                 email,
                 timestamp: new Date().toISOString(),
             });
-            localStorage.setItem("batteryme-emails", JSON.stringify(emails));
+            localStorage.setItem("sayit-emails", JSON.stringify(emails));
 
             // Track email signup in PostHog
             posthog.capture('email_captured', {
@@ -39,7 +39,7 @@ export function EmailCapture() {
             });
 
             setStatus("success");
-            setMessage("Thanks! We'll notify you when BatteryMe launches.");
+            setMessage("Thanks! We'll notify you when SayIt launches.");
             setEmail("");
         } catch (error) {
             setStatus("error");
