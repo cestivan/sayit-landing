@@ -10,7 +10,7 @@ export function SocialProof() {
                     Loved by developers, designers, and creators.
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                    If you edit videos, run VMs, code, or use external monitors… you&apos;ll finally see exactly what drains your battery.
+                    Join thousands who have transformed the way they create content with voice.
                 </p>
             </div>
 
@@ -56,17 +56,17 @@ export function SocialProof() {
 
 const testimonials = [
     {
-        quote: "I finally understand why my battery health dropped 3% in a week. Turns out it was my dock.",
+        quote: "Game changer for meeting notes. I can focus on the conversation while SayIt captures everything perfectly.",
         author: "Alex Chen",
         role: "Software Engineer",
     },
     {
-        quote: "Better than coconutBattery and iStat for battery insights. The AI explanations are actually useful.",
+        quote: "The multi-language support is incredible. I switch between English and Chinese seamlessly during calls.",
         author: "Sarah Miller",
         role: "Product Designer",
     },
     {
-        quote: "External monitor power analysis blew my mind. I saved 20% battery just by changing one setting.",
+        quote: "I write 10x faster by speaking my thoughts. SayIt makes content creation effortless.",
         author: "David Kim",
         role: "Video Editor",
     },
