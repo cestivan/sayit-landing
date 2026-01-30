@@ -14,7 +14,7 @@ export function Footer() {
                 <Button
                     size="lg"
                     className="gap-2 text-base"
-                    onClick={() => window.open('https://github.com/cross-mind/sayit-macos/releases/latest/download/SayIt-macOS.zip', '_blank')}
+                    onClick={() => window.open('https://github.com/cross-mind/sayit-macos/releases/latest/download/SayIt-v1.0.0.dmg', '_blank')}
                 >
                     <Download className="h-4 w-4" />
                     Download for Free
