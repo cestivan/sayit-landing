@@ -51,7 +51,7 @@ export function Pricing() {
                 </div>
 
                 {/* Pro Plan */}
-                <div className="relative rounded-3xl border border-primary/50 bg-card/80 p-8 shadow-2xl backdrop-blur-sm">
+                <div className="relative rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-card/90 via-card/80 to-primary/5 p-8 shadow-2xl backdrop-blur-sm ring-1 ring-primary/20">
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                         <Badge className="bg-primary text-primary-foreground hover:bg-primary">
                             Most Popular
