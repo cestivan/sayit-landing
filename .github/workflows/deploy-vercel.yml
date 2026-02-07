@@ -1,5 +1,5 @@
 name: Deploy to Vercel
-on:
+true:
   push:
     branches:
     - main
@@ -58,3 +58,7 @@ jobs:
           \ }}\\`\n\nPreview will be available in ~2 minutes.\n`;\n\ngithub.rest.issues.createComment({\n\
           \  issue_number: context.issue.number,\n  owner: context.repo.owner,\n \
           \ repo: context.repo.repo,\n  body: comment\n});\n"
+_metadata:
+  last_modified_session: 274f44ca-b0cf-4961-85da-517725dc452e
+  last_modified_at: '2026-02-06T08:34:36.871911+00:00'
+  modified_by: agent
